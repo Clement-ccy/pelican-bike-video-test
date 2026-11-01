@@ -90,6 +90,8 @@ python tools/audio.py
 node tools/encode.mjs --frames out/frames_v2 --audio out/audio/mix.wav --out out/final.mp4
 ```
 
+想做自己的版本？[docs/PROMPT.md](docs/PROMPT.md) 是从零复现本片的完整提示词。
+
 ## 技术要点（踩过的坑）
 - p5 2.x 的 `bezierVertex()` **一次只吃一个点**（六参数的旧写法会让 `evaluateCubicBezier` 拿到 undefined）。
 - p5 2.x 的 WEBGL **不能用 CSS 字型名**（只有载入的 TTF 有字形），所以全片文字走 `K.txt()` 的 2D 图层再合成。
