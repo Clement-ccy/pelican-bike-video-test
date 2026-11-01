@@ -1,0 +1,17 @@
+# 依赖
+node_modules/
+
+# 渲染与合成产物（成片走 GitHub Releases，不进版本库）
+out/
+
+# 本机素材：Kokoro 语音模型（v2 起声音全部由 tools/audio.py 合成，不再需要）
+vendor/kokoro/
+
+# Python
+__pycache__/
+*.pyc
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.log

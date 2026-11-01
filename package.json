@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "p5": "^2.3.4",
+    "p5.brush": "^2.2.3",
+    "puppeteer": "^25.16.0"
+  },
+  "name": "pelican-test",
+  "description": "The Pelican Test / 鹈鹕测试 — procedurally generated 82s film (p5.js + p5.brush, WEBGL)",
+  "scripts": {
+    "shot": "node tools/shot.mjs",
+    "sheet": "node tools/sheet.mjs",
+    "render": "node tools/render.mjs --dur 82 --workers 7 --outdir out/frames_v2",
+    "encode": "node tools/encode.mjs --frames out/frames_v2 --audio out/audio/mix.wav --out out/final.mp4",
+    "audio": "python tools/audio.py",
+    "build": "npm run audio && npm run render && npm run encode"
+  },
+  "license": "MIT",
+  "private": true
+}
